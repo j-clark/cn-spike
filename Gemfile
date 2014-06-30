@@ -19,4 +19,5 @@ group :development, :test do
   gem 'capybara'
   gem 'capybara-webkit'
   gem 'spring'
+  gem 'webmock'
 end
