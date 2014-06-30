@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  devise :omniauthable, omniauth_providers: [:facebook]
+
   class << self
     def create_with_omniauth(auth)
       create(

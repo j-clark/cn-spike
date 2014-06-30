@@ -11,13 +11,17 @@ gem 'jquery-rails'
 gem 'd3-rails'
 gem 'angularjs-rails'
 gem 'omniauth-facebook'
+gem 'devise'
 
 group :development, :test do
-  gem 'rspec-rails'
   gem 'pry'
   gem 'pry-rails'
+  gem 'spring'
+end
+
+group :test do
   gem 'capybara'
   gem 'capybara-webkit'
-  gem 'spring'
   gem 'webmock'
+  gem 'rspec-rails'
 end
