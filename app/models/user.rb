@@ -1,5 +1,15 @@
 class User < ActiveRecord::Base
-  devise :omniauthable, omniauth_providers: [:facebook]
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  # devise , :registerable,
+         # :recoverable, :rememberable, :trackable, :validatable,
+  devise :database_authenticatable,
+    :registerable,
+    :recoverable,
+    :rememberable,
+    :trackable,
+    # :validatable,
+    :omniauthable, omniauth_providers: [:facebook]
 
   class << self
     def create_with_omniauth(auth)
