@@ -27,6 +27,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    angularjs-rails (1.2.18)
     arel (5.0.1.20140414130214)
     builder (3.2.2)
     capybara (2.3.0)
@@ -39,14 +40,22 @@ GEM
       capybara (~> 2.0, >= 2.0.2)
       json
     coderay (1.1.0)
+    d3-rails (3.4.4)
+      railties (>= 3.1)
     diff-lcs (1.2.5)
     erubis (2.7.0)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
+    hashie (2.1.2)
     hike (1.2.3)
+    httpauth (0.2.1)
     i18n (0.6.9)
     jquery-rails (3.1.1)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
+    jwt (0.1.13)
+      multi_json (>= 1.5)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -55,8 +64,23 @@ GEM
     mini_portile (0.6.0)
     minitest (5.3.5)
     multi_json (1.10.1)
+    multipart-post (2.0.0)
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
+    oauth2 (0.8.1)
+      faraday (~> 0.8)
+      httpauth (~> 0.1)
+      jwt (~> 0.1.4)
+      multi_json (~> 1.0)
+      rack (~> 1.2)
+    omniauth (1.2.1)
+      hashie (>= 1.2, < 3)
+      rack (~> 1.0)
+    omniauth-facebook (1.4.0)
+      omniauth-oauth2 (~> 1.0.2)
+    omniauth-oauth2 (1.0.3)
+      oauth2 (~> 0.8.0)
+      omniauth (~> 1.0)
     polyglot (0.3.5)
     pry (0.10.0)
       coderay (~> 1.1.0)
@@ -141,9 +165,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  angularjs-rails
   capybara
   capybara-webkit
+  d3-rails
   jquery-rails
+  omniauth-facebook
   pry
   pry-rails
   rails (= 4.1.2)
